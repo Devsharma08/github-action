@@ -7,5 +7,5 @@ jobs:
     env:
       multi_var: "dev"
     steps : 
-      - run: echo "hello my name is $multi_var and in ${{var.college}}"
+      - run: echo "hello my name is $multi_var and in ${{vars.college}}"
     
