@@ -1,0 +1,11 @@
+name: multiple variable
+on:
+  workflow_dispatch:
+jobs:
+  multiple_varable:
+    runs-on: ubuntu-latest
+    env:
+      multi_var: "dev"
+    steps : 
+      - run: echo "hello my name is $multi_var and in ${{var.college}}"
+    
