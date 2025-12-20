@@ -19,7 +19,7 @@ jobs:
       - name: add numbers
         id: sum
         run: |
-          echo "sum=$((${{inputs.number1}} + ${{inputs.number2}}))"
+          echo "result=$((${{inputs.number1}} + ${{inputs.number2}}))"
           echo "sum=$result" >> $GITHUB_OUTPUT
 
       - name: display sum
