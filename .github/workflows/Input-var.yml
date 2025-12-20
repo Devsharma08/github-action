@@ -4,26 +4,24 @@ on:
   workflow_dispatch:
     inputs:
       number1:
-        default: '0'
-        required: true
         description: "enter number 1"
-      number2:
-        default: '0'
         required: true
+        default: '0'
+      number2:
         description: "enter number 2"
+        required: true
+        default: '0'
 
 jobs:
   testing_input_variable:
     runs-on: ubuntu-latest
-    steps: 
+
+    steps:
       - name: add numbers
         id: sum
         run: |
-          echo "result=$((${{inputs.number1}} + ${{inputs.number2}}))"
+          result=$((${{ inputs.number1 }} + ${{ inputs.number2 }}))
           echo "sum=$result" >> $GITHUB_OUTPUT
 
       - name: display sum
-        run: echo "sum of ${{inputs.number1}} and ${{inputs.number2}} is ${{steps.sum.outputs.sum}}"
-  
-      
-      
+        run: echo "sum of ${{ inputs.number1 }} and ${{ inputs.number2 }} is ${{ steps.sum.outputs.sum }}"
