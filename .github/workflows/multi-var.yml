@@ -1,4 +1,4 @@
-name: multiple variable
+name: testing configuration variable
 on:
   workflow_dispatch:
 jobs:
